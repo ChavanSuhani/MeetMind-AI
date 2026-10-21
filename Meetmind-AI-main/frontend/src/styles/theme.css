@@ -1,0 +1,159 @@
+:root {
+  --mm-primary: #6C63FF;
+  --mm-primary-dark: #564FD8;
+  --mm-accent: #00B8A9;
+  --mm-bg: #F7F7FB;
+  --mm-surface: #FFFFFF;
+  --mm-border: #E6E6F0;
+  --mm-text: #1F2133;
+  --mm-text-muted: #6B7089;
+  --mm-danger: #EF4444;
+  --mm-warning: #F97316;
+  --mm-radius: 14px;
+  --mm-shadow: 0 4px 24px rgba(31, 33, 51, 0.06);
+}
+
+body {
+  background-color: var(--mm-bg);
+  color: var(--mm-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.mm-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: var(--mm-surface);
+  border-right: 1px solid var(--mm-border);
+}
+
+.mm-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--mm-text);
+}
+
+.mm-brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--mm-primary), var(--mm-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.mm-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  color: var(--mm-text-muted);
+  font-weight: 500;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.mm-nav-link:hover {
+  background: var(--mm-bg);
+  color: var(--mm-text);
+}
+
+.mm-nav-link.active {
+  background: rgba(108, 99, 255, 0.1);
+  color: var(--mm-primary);
+}
+
+.mm-card {
+  background: var(--mm-surface);
+  border: 1px solid var(--mm-border);
+  border-radius: var(--mm-radius);
+  box-shadow: var(--mm-shadow);
+}
+
+.mm-btn-primary {
+  background: var(--mm-primary);
+  border-color: var(--mm-primary);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.mm-btn-primary:hover {
+  background: var(--mm-primary-dark);
+  border-color: var(--mm-primary-dark);
+  color: white;
+}
+
+.mm-btn-outline {
+  border-radius: 10px;
+  font-weight: 600;
+  border-color: var(--mm-border);
+  color: var(--mm-text);
+}
+
+.mm-badge {
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.72rem;
+  padding: 0.3rem 0.7rem;
+  text-transform: capitalize;
+}
+
+.mm-badge-completed { background: rgba(0, 184, 169, 0.12); color: var(--mm-accent); }
+.mm-badge-processing { background: rgba(108, 99, 255, 0.12); color: var(--mm-primary); }
+.mm-badge-failed { background: rgba(239, 68, 68, 0.12); color: var(--mm-danger); }
+.mm-badge-uploaded { background: rgba(107, 112, 137, 0.12); color: var(--mm-text-muted); }
+
+.mm-upload-zone {
+  border: 2px dashed var(--mm-border);
+  border-radius: var(--mm-radius);
+  background: var(--mm-surface);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.mm-upload-zone:hover,
+.mm-upload-zone.dragover {
+  border-color: var(--mm-primary);
+  background: rgba(108, 99, 255, 0.04);
+}
+
+.mm-record-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--mm-danger);
+  animation: mm-pulse 1.4s infinite;
+}
+
+@keyframes mm-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.mm-chat-bubble-user {
+  background: var(--mm-primary);
+  color: white;
+  border-radius: 16px 16px 4px 16px;
+}
+
+.mm-chat-bubble-assistant {
+  background: var(--mm-surface);
+  border: 1px solid var(--mm-border);
+  border-radius: 16px 16px 16px 4px;
+}
+
+.mm-segment:hover {
+  background: var(--mm-bg);
+}
+
+.mm-speaker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}

@@ -1,0 +1,67 @@
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.env
+backend/app/uploads/*
+!backend/app/uploads/.gitkeep
+backend/app/chroma_store/
+*.pyc
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# ======================================
+# Python
+# ======================================
+
+backend/venv/
+backend/app/__pycache__/
+*.py[cod]
+
+# ======================================
+# Environment Files
+# ======================================
+
+backend/.env
+backend/.env.example
+
+# ======================================
+# Runtime Generated Data
+# ======================================
+
+backend/app/chroma_store/
+backend/app/uploads/
+
+# ======================================
+# Node.js
+# ======================================
+
+frontend/node_modules/
+frontend/dist/
+
+# ======================================
+# VS Code
+# ======================================
+
+.vscode/
+
+# ======================================
+# Logs
+# ======================================
+
+*.log
+
+# ======================================
+# Operating System Files
+# ======================================
+
+.DS_Store
+Thumbs.db
